@@ -7,7 +7,43 @@
 <body>
 
     {% block content %}
-       
+       <h1>HUSTl</h1>
+       {% for sport in sports %}
+            <h2>{{sport.title}}</h2>
+            <small>{{post.description}}</small>
+            <div class='row'>
+                    <div class='col-sm-6 col-sm-offset-3'>
+            <form method='POST' action='/sports'>
+                {% include 'partials/movies_form.html' %}
+                <fieldset>
+                    <legend>Posts</legend>
+                    <!-- TITLE -->
+                    <p>
+                        <label for='sport-title'>Title</label><br>
+                        <input id='sport-title' type='text' name='title' />
+                    </p>
+            
+                    <!-- DESCRIPTION -->
+                    <p>
+                        <label for='description'>Description</label><br>
+                        <input id='description' type='text' name='description' />
+                    </p>
+                    <div class='form-group'>
+                        <label for='description'>Image URL</label><br>
+                        <textarea class='form-control' id='sport-image' type='text' name='Images' />{{ "\n".join(sport.Images) }}</textarea>
+                    </div>
+                    <div class='form-group'>
+                </fieldset>
+                <!-- BUTTON -->
+                <div class='form-group'>
+                <p>
+                        <button class='btn btn-primary' type='submit'>Submit</button>
+                    </div>
+                </p>
+            </form>
+            </div>
+            </div>
+        {% endfor %}
     {% endblock %}
 
 </body>
