@@ -29,9 +29,13 @@ def sports_update(sport_id):
         {'$set': updated_post})
     return redirect(url_for('sports_show', sport_id=sport_id, sports=sports.find()))
 
-@app.route('/sports/about_us')
-def about_us(sport_id):
-    return render_template('AboutUs.html')
+@app.route('/sports/profile')
+def sports_profile():
+    return render_template('sports_profile.html', sport={}, title='Profile')
+
+@app.route('/sports/AboutUs')
+def sports_AboutUs():
+    return render_template('AboutUs.html', title='About Us')
 
 @app.route('/sports/<sport_id>/edit')
 def sports_edit(sport_id):
