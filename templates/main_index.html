@@ -11,7 +11,7 @@
         {% for sport in sports %}
             <div class='col-md-3'>
                 <h2><a href='/sports/{{ sport._id }}'>{{ sport.title }}</a></h2>
-                <small>{{ sport.description }}</small>
+                <p>{{ sport.description }}</p>
 
             </div>
         {% endfor %}
