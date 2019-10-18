@@ -1,1 +1,5 @@
 # Hustl
+
+At HUSTl, we understand the what it takes to make it to the next level. Every day you are constantly grinding to build your skills and character. We understand the process to get to the next level can be tough and that is why we are here. Bridging the process for you to connect with coaches and scouts is our business and we want to do whatever it takes to help you put the foot in the door. We offer ways to build your success and give you the tools to make a difference in your life. We prototype the future for a better you.
+
+The code structure is set up with an main .py application with its connections to different html files that build the application's structure. With my understanding of Backend Web, utilizing the CRUD functioning helped with make the site use its functionality to post posts on the main landing page with the profile page set up for the user to place their info on the main page.

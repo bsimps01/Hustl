@@ -4,29 +4,41 @@
 <div class='row'>
         <div class='col-sm-6 col-sm-offset-3'>
 <form method='POST' action='/sports'>
-    {% include 'partials/sports_form.html' %}
     <center>
     <h1>HUSTL</h1>
     </center>
     <fieldset>
         <legend>Profile</legend>
-        <!-- TITLE -->
         <p>
             <label for='sport-title'>Name</label><br>
             <input id='sport-title' type='text' name='title' />
         </p>
-        <p>
+            <p>
                 <label for='sport-height'>Height</label><br>
                 <input id='sport-height' type='text' name='height' />
             </p>
-
-        <!-- DESCRIPTION -->
         <p>
-            <label for='description'>Description</label><br>
-            <input id='description' type='text' name='description' />
+                <label for='sport-weight'>Weight</label><br>
+                <input id='sport-weight' type='text' name='weight' />
+        </p>
+            <p>
+                <label for='sport-weight'>Hometown</label><br>
+                <input id='sport-weight' type='text' name='weight' />
+            </p>
+            <p>
+                    <label for='sport-weight'>Current City</label><br>
+                    <input id='sport-weight' type='text' name='weight' />
+            </p>
+            <p>
+                    <label for='sport-weight'>Schools</label><br>
+                    <input id='sport-weight' type='text' name='weight' />
+            </p>
+        <p>
+            <label for='description'>Tell Us A Little Bit About Yourself</label><br>
+            <textarea class='form-control' id='description' type='text' name='description' /></textarea>
         </p>
         <div class='form-group'>
-            <label for='description'>Image URL</label><br>
+            <label for='description'>Add Video URLs Here</label><br>
             <textarea class='form-control' id='sport-image' type='text' name='Images' />{{ "\n".join(sport.Images) }}</textarea>
         </div>
         <div class='form-group'>

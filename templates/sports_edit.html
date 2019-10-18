@@ -6,30 +6,47 @@
 <form method='POST' action='/sports/{{sport._id}}'>
     <input type='hidden' name='_method' value='PUT'/>
     <fieldset>
-        
-        <!-- TITLE -->
-        <p>
-            <label for='sport-title'>Title</label><br>
-            <input id='sport-title' type='text' name='title' value='{{ sport.title }}'/>
-        </p>
-
-        <!-- DESCRIPTION -->
-        <p>
-            <label for='description'>Description</label><br>
-            <input id='description' type='text' name='description' value='{{ sport.description }}' />
-        </p>
-
-        <!-- VIDEO LINKS -->
-        <div class='form-group'>
-                <label for='description'>Image URL</label><br>
-                <textarea class='form-control' id='sport-image' type='text' name='Images' />{{ "\n".join(sports) }}</textarea>
+            <legend>Profile</legend>
+            <p>
+                <label for='sport-title'>Name</label><br>
+                <input id='sport-title' type='text' name='title' />
+            </p>
+                <p>
+                    <label for='sport-height'>Height</label><br>
+                    <input id='sport-height' type='text' name='height' />
+                </p>
+            <p>
+                    <label for='sport-weight'>Weight</label><br>
+                    <input id='sport-weight' type='text' name='weight' />
+            </p>
+                <p>
+                    <label for='sport-weight'>Hometown</label><br>
+                    <input id='sport-weight' type='text' name='weight' />
+                </p>
+                <p>
+                        <label for='sport-weight'>Current City</label><br>
+                        <input id='sport-weight' type='text' name='weight' />
+                </p>
+                <p>
+                        <label for='sport-weight'>Schools</label><br>
+                        <input id='sport-weight' type='text' name='weight' />
+                </p>
+            <p>
+                <label for='description'>Tell Us A Little Bit About Yourself</label><br>
+                <textarea class='form-control' id='description' type='text' name='description' /></textarea>
+            </p>
+            <div class='form-group'>
+                <label for='description'>Add Video URLs Here</label><br>
+                <textarea class='form-control' id='sport-image' type='text' name='Images' />{{ "\n".join(sport.Images) }}</textarea>
             </div>
-    </fieldset>
-    {% include 'partials/sports_form.html' %}
-    <!-- BUTTON -->
-    <div class='form-group'>
-            <button class='btn btn-primary' type='submit'>Save Profile</button>
-        </div>
+            <div class='form-group'>
+        </fieldset>
+        <!-- BUTTON -->
+        <div class='form-group'>
+        <p>
+                <button class='btn btn-primary' type='submit'>Save Profile</button>
+            </div>
+        </p>
     </form>
 </div>
 </div>

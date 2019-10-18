@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='row'>
+        <div class='col-sm-6 col-sm-offset-3'>
+<form method='POST' action='/sports'>
+    <center>
+    <h1>HUSTL</h1>
+    </center>
+    <fieldset>
+        <legend>Profile</legend>
+        <p>
+            <label for='sport-title'>Name</label><br>
+            <input id='sport-title' type='text' name='title' />
+        </p>
+          
+        <p>
+            <label for='description'>Tell Us A Little Bit About Yourself</label><br>
+            <textarea class='form-control' id='description' type='text' name='description' /></textarea>
+        </p>
+        <div class='form-group'>
+    </fieldset>
+    <!-- BUTTON -->
+    <div class='form-group'>
+    <p>
+            <button class='btn btn-primary' type='submit'>Post!</button>
+        </div>
+    </p>
+</form>
+</div>
+</div>
+{% endblock %}

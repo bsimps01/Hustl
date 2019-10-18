@@ -42,6 +42,10 @@ def sports_edit(sport_id):
     sport = sports.find_one({'_id': ObjectId(sport_id)})
     return render_template('sports_edit.html', sport=sport, title='Edit Posts')
 
+@app.route('/sports/Post')
+def sports_post():
+    return render_template('Post.html', title='Post')
+
 
 @app.route('/sports/<sport_id>/delete', methods=['POST'])
 def sports_delete(sport_id):
@@ -76,6 +80,10 @@ def sports_submit():
         'title': request.form.get('title'),
         'description': request.form.get('description'),
         'Images': request.form.get('Image'),
+        'Height': request.form.get('Height'),
+        'Weight': request.form.get('Weight'),
+        'Hometown': request.form.get('Hometown'),
+        'Schools': request.form.get('Schools'),
         'created_at': datetime.now()
     }
     sport_id = sports.insert_one(sport).inserted_id
