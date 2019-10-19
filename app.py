@@ -10,6 +10,7 @@ host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Hustl')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 sports = db.sports
+posts = db.posts
 comments = db.comments
 
 @app.route('/')
@@ -27,7 +28,7 @@ def sports_update(sport_id):
     sports.update_one(
         {'_id': ObjectId(sport_id)},
         {'$set': updated_post})
-    return redirect(url_for('sports_show', sport_id=sport_id, sports=sports.find()))
+    return redirect(url_for('main_index', sport_id=sport_id, sports=sports.find()))
 
 @app.route('/sports/profile')
 def sports_profile():
