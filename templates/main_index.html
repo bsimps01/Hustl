@@ -5,17 +5,16 @@
 <center>
 <h1>HUSTL</h1>
 </center>
-<center>
-<a href="/sports/Post">Add New Post</a>
-</center>
 </br>
 <div class='row'>
         {% for sport in sports %}
             <div class='col-md-3'>
                 <h2><a href='/sports/{{ sport._id }}'>{{ sport.title }}</a></h2>
                 <p>{{ sport.description }}</p>
-
             </div>
         {% endfor %}
     </div>
+    <center>
+            <a href="/sports/Post">Add New Post</a>
+    </center>
 {% endblock %}
